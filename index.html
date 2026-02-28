@@ -28,35 +28,35 @@
      </span>
     </div>
 
-    <nav class="desktop-nav" aria-label="メインメニュー">
+    <nav class="desktop-nav" aria-label="Main menu">
      <ul class="desktop-menu">
       <li class="menu-item has-sub">
-       <a href="./pages/about.html">基本情報</a>
+       <a href="./pages/about.html">About</a>
        <ul class="sub-menu">
-        <li><a href="./pages/about.html">研究室について</a></li>
-        <li><a href="./index.html#members">メンバー</a></li>
+        <li><a href="./pages/about.html">About</a></li>
+        <li><a href="./index.html#members">Members</a></li>
        </ul>
       </li>
 
       <li class="menu-item has-sub">
-       <a href="./index.html#about">研究について</a>
+       <a href="./index.html#about">Research</a>
        <ul class="sub-menu">
-        <li><a href="./index.html#about">研究</a></li>
-        <li><a href="./index.html#publications">業績</a></li>
+        <li><a href="./index.html#about">Research</a></li>
+        <li><a href="./index.html#publications">Publications</a></li>
        </ul>
       </li>
 
-      <li class="menu-item"><a href="./index.html#news">ニュース</a></li>
+      <li class="menu-item"><a href="./index.html#news">News</a></li>
 
       <li class="menu-item has-sub">
-       <a href="./index.html#contact">外部の方へ</a>
+       <a href="./index.html#contact">For Visitors</a>
        <ul class="sub-menu">
-        <li><a href="./index.html#contact">学生募集について</a></li>
-        <li><a href="./index.html#contact">企業の方へ</a></li>
+        <li><a href="./index.html#contact">Prospective Students</a></li>
+        <li><a href="./index.html#contact">For Industry</a></li>
        </ul>
       </li>
 
-      <li class="menu-item"><a href="./index.html#contact">アクセス</a></li>
+      <li class="menu-item"><a href="./index.html#contact">Access</a></li>
      </ul>
     </nav>
 
@@ -75,12 +75,12 @@
    </div>
 
    <nav class="mobile-nav" id="mobileNav">
-    <button onclick="scrollToSection('about')">研究について</button>
-    <button onclick="scrollToSection('research')">研究領域</button>
-    <button onclick="scrollToSection('members')">メンバー</button>
-    <button onclick="scrollToSection('publications')">論文・業績</button>
-    <button onclick="scrollToSection('news')">ニュース</button>
-    <button onclick="scrollToSection('contact')">コンタクト</button>
+    <button onclick="scrollToSection('about')">About</button>
+    <button onclick="scrollToSection('research')">Research</button>
+    <button onclick="scrollToSection('members')">Members</button>
+    <button onclick="scrollToSection('publications')">Publications</button>
+    <button onclick="scrollToSection('news')">News</button>
+    <button onclick="scrollToSection('contact')">Access</button>
    </nav>
   </div>
  </header>
@@ -100,18 +100,25 @@
  <!-- ===== About(研究について) ===== -->
  <section id="about">
   <div class="container">
-   <h2 class="section-title">研究について</h2>
+   <div class="section-head">
+    <h2 class="section-title section-title-lined">About</h2>
+   </div>
    <p class="section-lead">
     私たちの研究室では、機械学習・深層学習を中心とした最先端の人工知能技術の研究開発を行っています。
     理論と実践の両面からAIの可能性を追求し、社会に貢献することを目指しています。
    </p>
+   <div class="news-more-wrap section-more-wrap">
+    <a class="news-more" href="./pages/about.html">View More</a>
+   </div>
   </div>
  </section>
 
  <!-- ===== Members ===== -->
  <section id="members" class="alt">
   <div class="container">
-   <h2 class="section-title">メンバー</h2>
+   <div class="section-head">
+    <h2 class="section-title section-title-lined">Members</h2>
+   </div>
 
    <div style="margin-bottom: 1.5rem;">
     <p class="subsection-title">教員</p>
@@ -127,16 +134,18 @@
     </div>
    </div>
 
-   <p style="text-align:center;">
-    <a class="btn btn-primary" href="./pages/students.html">学生はこちら →</a>
-   </p>
+   <div class="news-more-wrap section-more-wrap">
+    <a class="news-more" href="./pages/students.html">View More</a>
+   </div>
   </div>
  </section>
 
  <!-- ===== Publications ===== -->
  <section id="publications">
   <div class="container">
-   <h2 class="section-title">論文・業績</h2>
+   <div class="section-head">
+    <h2 class="section-title section-title-lined">Publications</h2>
+   </div>
    <div class="pub-list">
 
     <div class="card">
@@ -216,6 +225,9 @@
     </div>
 
    </div>
+   <div class="news-more-wrap section-more-wrap">
+    <a class="news-more" href="./index.html#publications">View More</a>
+   </div>
   </div>
  </section>
 
@@ -230,8 +242,7 @@
     <li class="news-card">
      <a class="news-card-anchor" href="./index.html#publications" aria-label="佐藤さんの論文がNeurIPS 2026に採択されました">
       <img class="news-card-image"
-       src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=720&q=80"
-       alt="研究発表の様子">
+       src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=720&q=80" alt="研究発表の様子">
       <time class="news-card-date" datetime="2026-02-20">2026.02.20</time>
       <p class="news-card-title">佐藤さんの論文がNeurIPS 2026に採択されました</p>
       <span class="news-card-more">more <span aria-hidden="true">→</span></span>
@@ -252,8 +263,7 @@
     <li class="news-card">
      <a class="news-card-anchor" href="./index.html#contact" aria-label="新しい大学院生を募集しています">
       <img class="news-card-image"
-       src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=720&q=80"
-       alt="学生募集の案内">
+       src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=720&q=80" alt="学生募集の案内">
       <time class="news-card-date" datetime="2025-12-10">2025.12.10</time>
       <p class="news-card-title">新しい大学院生を募集しています</p>
       <span class="news-card-more">more <span aria-hidden="true">→</span></span>
@@ -270,7 +280,9 @@
  <!-- ===== Contact ===== -->
  <section id="contact">
   <div class="container">
-   <h2 class="section-title">コンタクト</h2>
+   <div class="section-head">
+    <h2 class="section-title section-title-lined">Contact</h2>
+   </div>
    <div class="card contact-card">
     <div class="contact-body">
 
