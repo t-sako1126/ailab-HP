@@ -28,14 +28,38 @@
      </span>
     </div>
 
-    <nav class="desktop-nav">
-     <button type="button" onclick="location.href='./pages/about.html'">研究について</button>
-     <button type="button" onclick="location.href='./index.html#research'">研究領域</button>
-     <button type="button" onclick="location.href='./index.html#members'">メンバー</button>
-     <button type="button" onclick="location.href='./index.html#publications'">論文・業績</button>
-     <button type="button" onclick="location.href='./index.html#news'">ニュース</button>
-     <button type="button" onclick="location.href='./index.html#contact'">コンタクト</button>
+    <nav class="desktop-nav" aria-label="メインメニュー">
+     <ul class="desktop-menu">
+      <li class="menu-item has-sub">
+       <a href="./pages/about.html">基本情報</a>
+       <ul class="sub-menu">
+        <li><a href="./pages/about.html">研究室について</a></li>
+        <li><a href="./index.html#members">メンバー</a></li>
+       </ul>
+      </li>
+
+      <li class="menu-item has-sub">
+       <a href="./index.html#about">研究について</a>
+       <ul class="sub-menu">
+        <li><a href="./index.html#about">研究</a></li>
+        <li><a href="./index.html#publications">業績</a></li>
+       </ul>
+      </li>
+
+      <li class="menu-item"><a href="./index.html#news">ニュース</a></li>
+
+      <li class="menu-item has-sub">
+       <a href="./index.html#contact">外部の方へ</a>
+       <ul class="sub-menu">
+        <li><a href="./index.html#contact">学生募集について</a></li>
+        <li><a href="./index.html#contact">企業の方へ</a></li>
+       </ul>
+      </li>
+
+      <li class="menu-item"><a href="./index.html#contact">アクセス</a></li>
+     </ul>
     </nav>
+
 
     <button class="menu-toggle" id="menuToggle" aria-label="メニューを開く">
      <svg id="iconMenu" viewBox="0 0 24 24">

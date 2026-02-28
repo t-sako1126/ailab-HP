@@ -128,14 +128,26 @@
     /* Desktop Nav */
     nav.desktop-nav {
      display: flex;
-     gap: 2rem;
+     align-items: center;
     }
 
-    nav.desktop-nav button {
-     background: none;
-     border: none;
-     cursor: pointer;
-     font-family: inherit;
+    nav.desktop-nav .desktop-menu {
+     list-style: none;
+     display: flex;
+     align-items: center;
+     gap: 2rem;
+     margin: 0;
+     padding: 0;
+    }
+
+    nav.desktop-nav .menu-item {
+     position: relative;
+    }
+
+    nav.desktop-nav .menu-item>a {
+     display: inline-flex;
+     align-items: center;
+     gap: 0.25rem;
      font-size: 0.95rem;
      font-weight: 500;
      color: var(--gray-900);
@@ -143,9 +155,67 @@
      transition: color var(--transition);
     }
 
-    nav.desktop-nav button:hover {
+    nav.desktop-nav .menu-item>a:hover,
+    nav.desktop-nav .menu-item:focus-within>a {
      color: var(--blue-600);
     }
+
+    nav.desktop-nav .has-sub>a::after {
+     content: "▾";
+     font-size: 0.72rem;
+    }
+
+    nav.desktop-nav .has-sub::after {
+     content: "";
+     position: absolute;
+     top: 100%;
+     left: 0;
+     width: 100%;
+     height: 0.7rem;
+    }
+
+    nav.desktop-nav .sub-menu {
+     list-style: none;
+     margin: 0;
+     padding: 0.45rem 0;
+     min-width: 190px;
+     position: absolute;
+     top: calc(100% + 0.55rem);
+     left: 0;
+     background: var(--white);
+     border: 1px solid var(--gray-200);
+     border-radius: var(--radius);
+     box-shadow: var(--shadow-md);
+     opacity: 0;
+     visibility: hidden;
+     pointer-events: none;
+     transform: translateY(4px);
+     transition: opacity var(--transition), transform var(--transition), visibility var(--transition);
+     z-index: 300;
+    }
+
+    nav.desktop-nav .sub-menu a {
+     display: block;
+     padding: 0.5rem 0.9rem;
+     font-size: 0.9rem;
+     color: var(--gray-900);
+     white-space: nowrap;
+    }
+
+    nav.desktop-nav .sub-menu a:hover {
+     background: var(--gray-50);
+     color: var(--blue-600);
+    }
+
+    nav.desktop-nav .has-sub:hover>.sub-menu,
+    nav.desktop-nav .has-sub:focus-within>.sub-menu,
+    nav.desktop-nav .has-sub>.sub-menu:hover {
+     opacity: 1;
+     visibility: visible;
+     pointer-events: auto;
+     transform: translateY(0);
+    }
+
 
     /* Mobile Menu Toggle */
     .menu-toggle {
