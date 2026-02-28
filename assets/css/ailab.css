@@ -560,46 +560,90 @@
 
     /* ===== Publications ===== */
     .pub-list {
-     display: flex;
-     flex-direction: column;
-     gap: 1.25rem;
+     list-style: none;
+     margin: 0;
+     padding: 0;
+     border-top: 1px solid #cfd4db;
     }
 
-    .pub-card {
-     display: flex;
-     align-items: flex-start;
-     gap: 1.25rem;
-     padding: 1.5rem;
+    .pub-item {
+     padding: 1.05rem 0 1.2rem 0.72rem;
+     border-bottom: 1px solid #cfd4db;
     }
 
-    .pub-card h3 {
-     font-size: 1rem;
-     font-weight: 600;
-     margin-bottom: 0.3rem;
-     line-height: 1.5;
+    .pub-item:hover {
+     background: rgba(255, 255, 255, 0.24);
     }
 
-    .pub-meta {
+    .pub-head {
      display: flex;
      align-items: center;
-     gap: 0.5rem;
      flex-wrap: wrap;
-     margin-top: 0.4rem;
+     gap: 0.5rem;
+     margin-bottom: 0.62rem;
     }
 
-    .pub-venue {
-     font-size: 0.88rem;
-     color: var(--gray-600);
+    .pub-year {
+     color: #1f2937;
+     font-size: 1.2rem;
+     font-weight: 500;
+     line-height: 1;
+     font-variant-numeric: tabular-nums;
+     margin-right: 0.15rem;
     }
 
-    .ext-icon {
-     width: 14px;
-     height: 14px;
-     stroke: var(--gray-400);
-     fill: none;
-     stroke-width: 2;
-     stroke-linecap: round;
-     stroke-linejoin: round;
+    .pub-tag-primary,
+    .pub-tag-secondary {
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+     min-width: 122px;
+     padding: 0.2rem 0.65rem;
+     border-radius: 2px;
+     font-size: 0.74rem;
+     font-weight: 600;
+     letter-spacing: 0.01em;
+    }
+
+    .pub-tag-primary {
+     color: var(--white);
+     background: #12858d;
+    }
+
+    .pub-tag-primary.is-journal {
+     background: #3d7ac0;
+    }
+
+    .pub-tag-secondary {
+     color: #1f2937;
+     background: #dfe1e5;
+    }
+
+    .pub-item-title {
+     margin: 0 0 0.5rem;
+     color: #111827;
+     font-size: clamp(1.08rem, 1.35vw, 1.32rem);
+     line-height: 1.48;
+     font-weight: 600;
+    }
+
+    .pub-paper-link {
+     color: #12858d;
+     text-decoration: underline;
+     text-underline-offset: 0.14em;
+     text-decoration-thickness: 0.08em;
+    }
+
+    .pub-authors,
+    .pub-venue-line {
+     margin: 0;
+     color: #1f2937;
+     font-size: 0.95rem;
+     line-height: 1.55;
+    }
+
+    .pub-venue-line {
+     margin-top: 0.2rem;
     }
 
     /* ===== News ===== */
@@ -867,9 +911,38 @@
       flex-direction: column;
      }
 
-     .pub-card {
-      flex-direction: column;
-      gap: 0.75rem;
+     .pub-item {
+      padding: 1.05rem 0 1.2rem 0.38rem;
+     }
+
+     .pub-head {
+      gap: 0.45rem;
+      margin-bottom: 0.65rem;
+     }
+
+     .pub-year {
+      font-size: 1.05rem;
+      margin-right: 0.15rem;
+     }
+
+     .pub-tag-primary,
+     .pub-tag-secondary {
+      width: fit-content;
+      min-width: 0;
+      padding: 0.18rem 0.55rem;
+      font-size: 0.74rem;
+     }
+
+     .pub-item-title {
+      margin-bottom: 0.52rem;
+      font-size: 1rem;
+      line-height: 1.48;
+     }
+
+     .pub-authors,
+     .pub-venue-line {
+      font-size: 0.95rem;
+      line-height: 1.5;
      }
 
      .news-section {
